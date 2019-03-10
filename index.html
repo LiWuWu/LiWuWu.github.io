@@ -1,2 +1,391 @@
-11
-<img src="img/t1.png">
+<!DOCTYPE html>
+<html>
+<head>
+<title>哔哩哔哩产品分析</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>哔哩哔哩产品分析</h1>
+<p><img src="https://liwuwu.github.io/img/t1.png" alt="此处输入图片的描述" /> </p>
+<p>哔哩哔哩,既b站。2009年，受到AcFun影响而创建。凭借独特的弹幕文化、多元的视频内容，逐渐成为ACG文化交流中心。历经3年时间赶超AcFun，成为当时第一ACG社区。</p>
+<p>一. 功能架构  
+</p>
+<p>二. 用户分析   
+</p>
+<p>三. 关于产品</p>
+<p>四. 商业模式  
+</p>
+<p>五. 结语  
+</p>
+<h1>一.功能结构</h1>
+<p>操作系统：Android<br />
+app版本：5.38.0<br />
+<img src="https://liwuwu.github.io/img/t2.png" alt="内容描述" />   
+</p>
+<h1>二.用户分析</h1>
+<h2>用户属性</h2>
+<p><img src="https://liwuwu.github.io/img/t3.PNG" alt="内容描述" />  </p>
+<blockquote>
+<p>地域分布上主要集中在东南沿海，物质的充足使人更加追求精神的文化消费，比内陆居民更多接触新鲜事物 </p>
+</blockquote>
+<p><img src="https://liwuwu.github.io/img/t4.PNG" alt="内容描述" /></p>
+<blockquote>
+<p>性别分布上，男女用户相对平衡，但男性用户偏多，ACG文化男性爱好者偏多</p>
+</blockquote>
+<p><img src="https://liwuwu.github.io/img/t5.PNG" alt="内容描述" />    
+</p>
+<blockquote>
+<p>年龄分布上，用户主要集中在10-20,20-30。<br />
+该年龄阶段业余时间丰富，并且对于年轻潮流的事物更加容易接受。</p>
+</blockquote>
+<h2>用户人群</h2>
+<blockquote>
+<p>二次元人群：<br />
+实际上二次元就是ACGN这四个词覆盖的人群，A是动画，C是漫画，G是游戏，N是小说。这些人因为ACGN描绘出了虚拟世界，他们沉浸在这些虚拟世界中的人群。</p>
+</blockquote>
+<h1>三.关于产品</h1>
+<p>我是谁</p>
+<blockquote>
+<p>一个二次元，ACG社区</p>
+</blockquote>
+<p>我有什么</p>
+<blockquote>
+<p>最全、最及时的动漫内容,ACG综合性视频 </p>
+</blockquote>
+<p>有什么能吸引你</p>
+<blockquote>
+<p>独特的弹幕文化  
+</p>
+</blockquote>
+<h2>核心-弹幕文化</h2>
+<p>优点：参与到弹幕中，可以让用户感受到参与感、认同感、归属感，如果你发的内容和其他用户发的内容，主体意思大概都差不多，你会不会有一种惺惺相惜，相见恨晚的感觉？是的，你会有！</p>
+<p>缺点：遮盖视频内容，影响视频内容的观看，不了解弹幕的人群比较难以接受。</p>
+<h2>搜索功能</h2>
+<p>搜索功能是高频使用，所以应该将操作频率高的功能放在高频操作的位置，只在首页发现搜索功能。造成了用户的操作负担，大大降低效率。</p>
+<h2>二次检索</h2>
+<p>如果用户需要找的是一个比较冷门的视频，无法在推荐和搜索里得到满足，希望提供一个二次检索功能。</p>
+<h2>风险</h2>
+<ol>
+<li>版权问题：用户视频来自二次搬运等</li>
+<li>审核政策：涉黄涉暴视频</li>
+</ol>
+<h1>四.商业模式</h1>
+<p>会员服务</p>
+<blockquote>
+<p>提供大会员和年度会员，主要提供更加优质的画质，番剧更新提前观看，对比其它视频网站，更加容易让普通用户接受，同时较少的特权也使会员服务销售困难。  
+</p>
+</blockquote>
+<p>新番承包</p>
+<blockquote>
+<p>另类的众筹，保证视频质量，同时独特的无广告使其在诸多视频网站中脱颖而出。情怀驱动消费，这使得番剧收入极其不稳定，部分番剧购买超额，但部分冷门番剧无人问津。</p>
+</blockquote>
+<p>直播</p>
+<blockquote>
+<p>发展部分up主，分成直播打赏。</p>
+</blockquote>
+<p>游戏</p>
+<blockquote>
+<p>收入大头，ACG文化衍生的各类游戏。该类游戏与网站用户高度重合，游戏连运。提供游戏宣传平台，获取大量该类游戏忠实玩家。</p>
+</blockquote>
+<p>线下活动</p>
+<blockquote>
+<p>主要目的是宣传，盈利次之。</p>
+</blockquote>
+<p>周边  </p>
+<blockquote>
+<p>销售手办、模型、周边  
+</p>
+</blockquote>
+<h1>五. 结语 </h1>
+<p>B站区别于其他视频类网站之处就在于B站在满足了二次元文化群体对于ACG内容的需求之外，形成了一个该类人群交流的“广场”。<br />
+未来，哔哩哔哩是否可能会将触手伸向其它领域？</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
