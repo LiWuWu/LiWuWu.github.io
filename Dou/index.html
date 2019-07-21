@@ -293,7 +293,151 @@ img {
 <body>
 <p>（说明：水印为视频录制水印）</p>
 <p><a href="https://liwuwu.github.io/Dou/Dou/index.html">小斗App产品原型图</a>  </p>
-<h2>知乎App产品需求文档</h2>
+<h2>小斗App产品需求文档</h2>
+<h1>一、产品概述</h1>
+<h3>1 产品介绍</h3>
+<p>小斗是一款图片、视频分享保存软件，用户可以保存分享图片视频。<br />
+产品主色调为蓝色，风格为小清新。通过图片、视频管理，拉动交友。  </p>
+<h4>1.1 产品定位</h4>
+<p>slogn</p>
+<blockquote>
+<p>&quot;记录你的精彩&quot;</p>
+</blockquote>
+<p>产品的定位是保存分享社区，其中更加偏向于保存和管理，产品同时兼顾了交友、分享的功能。 </p>
+<h3>2. 文档属性</h3>
+<p>文档名称：小斗APP产品需求文档<br />
+撰写人：梁础<br />
+撰写时间：2019.07</p>
+<h3>3. 用户需求</h3>
+<table>
+   <tr>
+        <th width=80%>需求</th>
+        <th width=80%>功能</th>
+   </tr>
+   <tr align=center>
+	<td>发现有趣的内容，想要拍摄保存</td><td>记录</td>
+   </tr>
+   <tr align=center>
+	<td>发现感兴趣的人</td><td>添加好友</td>
+   </tr>
+   <tr align=center>
+	<td>无聊逛逛</td><td>友人时刻</td>
+   </tr>
+   <tr align=center>
+	<td>了解系统信息</td><td>通知</td>
+   </tr>
+   <tr align=center>
+	<td>个人私聊</td><td>私信</td>
+   </tr>
+   <tr align=center>
+	<td>调节app设置</td><td>系统设置</td>
+   </tr>
+   <tr align=center>
+	<td>更改ID</td><td>系统设置</td>
+   </tr>
+   <tr align=center>
+	<td>管理图片视频</td><td>我的记忆</td>
+   </tr>
+   <tr align=center>
+	<td>保存友人图片视频</td><td>友人时光</td>
+   </tr>
+   <tr align=center>
+	<td>分享友人图片视频</td><td>分享</td>
+   </tr>
+</table>
+<h1>二、产品结构</h1>
+<h3>1. 功能结构图</h3>
+<p><img src="https://liwuwu.github.io/Dou/img/Dou.png" /></p>
+<h1>三、产品设计</h1>
+<h4>1 权限</h4>
+<h5>登录：</h5>
+<pre><code>可以使用应用所有功能。  
+</code></pre>
+
+<h5>未登录：</h5>
+<pre><code>无法进入主界面
+</code></pre>
+
+<h5>无网络连接：</h5>
+<p><img src="https://liwuwu.github.io/img/NoNet.PNG" /></p>
+<pre><code>无网络连接时，点击重新加载刷新界面。  
+</code></pre>
+
+<h5>ID修改限制</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/set.PNG" /> </p>
+<pre><code>字数限制11位，只允许数字、字母、下划线,ID只允许修改一次
+</code></pre>
+
+<h4>2 部分交互设计</h4>
+<h5>首页多内容长页面切换及刷新：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/index.gif" /> </p>
+<pre><code>左右滑动，切换图片或视频。切换动画0.5s，切换方向跟随鼠标滑动方向。
+长页面可以拖拽移动。
+往下拉拽，到达顶部或底部。松开后，刷新页面，顶部提示下滑出现‘刷新页面’，悬停0.7s后，上滑消失。
+</code></pre>
+
+<h5>添加好友：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/add.gif" /></p>
+<pre><code>点击右上角添加好友，弹出“扫一扫”和“搜索添加”，透明度60%。2s不点击或者点击其它地方，功能栏收缩。
+</code></pre>
+
+<h5>搜索添加好友：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/search.gif" /></p>
+<pre><code>点击搜索添加，跳转相应界面。点击输入框，软键盘上滑，输入框上移动。点击取消软键盘下滑，输入框下移动。
+</code></pre>
+
+<h5>底部导航栏切换：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/change.gif" /></p>
+<pre><code>底部按钮不支持左右滑动切换，点击时底部按钮图片变化，跳转到对应界面。
+</code></pre>
+
+<h5>记录界面：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/rec.gif" /></p>
+<pre><code>切换到记录界面，图片变化，向上移动，时间0.3s。
+</code></pre>
+
+<h5>分享：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/share.gif" /></p>
+<pre><code>分享可以选择所有人或好友，选择后图片按列表顺序排序。
+</code></pre>
+
+<h5>修改ID：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/id.gif" /></p>
+<pre><code>字数限制11位，只允许数字、字母、下划线,ID只允许修改一次
+</code></pre>
+
+<h5>友人交流：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/com.gif" /></p>
+<pre><code>字数限制11位，只允许数字、字母、下划线,ID只允许修改一次
+</code></pre>
+
+<h4>3 部分功能说明：</h4>
+<h5>登录页面：</h5>
+<p>用户场景：打开小斗。</p>
+<p>功能描述：账号登录注册</p>
+<p>优先级：高。</p>
+<p>输入/前置条件：首次下载打开小斗</p>
+<p>页面逻辑：</p>
+<p>选择登录，输入账号密码
+注册，跳转注册页面
+游客进入，部分功能受限  </p>
+<h5>主页：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/index.PNG" /></p>
+<p>用户场景：打开应用</p>
+<p>功能描述：算法推荐用户近期浏览相近内容</p>
+<p>优先级：高。</p>
+<p>输入/前置条件：打开小斗</p>
+<p>页面逻辑：</p>
+<p>下拉刷新，上拉内容加载；
+在WiFi下，自动播放gif动画和视频；
+点击页面上的功能，跳转到相应的功能界面。</p>
+<h4>4 页面跳转：</h4>
+<h5>主页：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/1.png" /></p>
+<h5>记录：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/2.png" /></p>
+<h5>个人：</h5>
+<p><img src="https://liwuwu.github.io/Dou/img/3.png" /></p>
 
 </body>
 </html>
