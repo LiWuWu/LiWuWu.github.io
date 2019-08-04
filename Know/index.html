@@ -323,7 +323,7 @@ App图标为蓝色，应用主色调为蓝色，字体主色调为浅灰色，�
 撰写人：梁础<br />
 撰写时间：2019.06.25</p>
 <h3>3. 用户需求</h3>
-<table>
+<table  align=center border="0" cellspacing="0">
    <tr>
         <th width=80%>需求</th>
         <th width=80%>功能</th>
@@ -367,93 +367,305 @@ App图标为蓝色，应用主色调为蓝色，字体主色调为浅灰色，�
 <h3>3. 产品详情</h3>
 <p><img src="https://liwuwu.github.io/img/About.png" /></p>
 <h1>三、产品设计</h1>
-<h4>1 权限</h4>
+<h4>3.1 权限</h4>
 <h5>登录：</h5>
 <pre><code>可以使用应用所有功能。  
 </code></pre>
 
 <h5>未登录：</h5>
-<pre><code>游客身份进行浏览，付费、评论、点赞、提问会员功能无法使用。
-未登录点击付费、评论、点赞、提问等功能，弹出登录框，登录以后，返回原页面。收藏只保存到本地记录。
+<pre><code>付费、评论、点赞、提问会员功能无法使用。
 </code></pre>
 
-<h5>无网络连接：</h5>
-<p><img src="https://liwuwu.github.io/img/NoNet.PNG" /></p>
-<pre><code>无网络连接时，点击重新加载刷新界面。  
-关注和推荐栏根据历史缓存显示，但无法点击进入，点击以后显示无网络连接。
-</code></pre>
-
-<h5>首次下载登录应用</h5>
-<p><img src="https://liwuwu.github.io/img/firstlogin.png" /> 
-	用户首次打开应用，出现登录页面，通过手机号码一键登录，账号ID为手机号码，无密码。</p>
-<h5>验证登录输入限制</h5>
-<p><img src="https://liwuwu.github.io/img/login.gif" />  </p>
-<pre><code>登录输入手机号限制最大长度11，无法输入超过11个的数字。  
-输入数字少于11无法点击获取验证码，只有等于11时才能点击获取验证码。  
-点击获取验证码时进行验证，输入非数字，浮窗提示‘请输入数字’。
-</code></pre>
-
-<h5>账号密码登录</h5>
-<p><img src="https://liwuwu.github.io/img/password.PNG" /></p>
-<pre><code>用户输入账号密码点击登录后，首先进行账号格式验证。  
-纯数字：是否符合11位；非纯数字：验证账号是否符合邮箱格式。账号格式不对，提示用户‘请您检查是否正确输入账号’。  
-用户输入锁定大写时，提示‘键盘大写锁定’。
-</code></pre>
-
-<h4>2 部分交互设计</h4>
-<h5>下拉刷新：</h5>
-<p><img src="https://liwuwu.github.io/img/Refresh.gif" /></p>
-<pre><code>往下拉拽，最多移动1/10当前界面距离。松开后，刷新页面，顶部提示下滑出现‘刷新成功’，悬停0.7s后，上滑消失。
-</code></pre>
-
-<h5>搜索栏：</h5>
-<p><img src="https://liwuwu.github.io/img/Search.gif" /></p>
-<pre><code>点击进入搜索界面，下方显示热搜内容，点击切换不同类型热搜内容，按钮颜色变化（浅灰），按钮框左右拖拽可以移动。  
-搜索栏有提示文字‘搜索知乎内容’，点击后消失，输入键盘从下往上滑动出现，动画时间0.5s。
-</code></pre>
-
-<h5>首页：</h5>
-<p><img src="https://liwuwu.github.io/img/index.gif" /></p>
-<pre><code>打开应用，首先进入首页，默认出现推荐栏。点击上方按钮切换不同栏目，长页面可以上下拖拽，拖拽时底部栏向下隐藏，切换结束显示。  
-左右拖拽，同样可以根据顶部位置切换栏目。
-</code></pre>
-
-<h5>学习清单管理：</h5>
-<p><img src="https://liwuwu.github.io/img/learning.gif" /></p>
-<pre><code>点击管理进入学习清单管理界面，点击按钮缓慢向右移动，过滤内容。点击完成回到上一界面。
-</code></pre>
-
-<h5>底部导航栏切换：</h5>
-<p><img src="https://liwuwu.github.io/img/bottom.gif" /></p>
-<pre><code>底部按钮不支持左右滑动切换，点击时底部按钮图片变化。
-</code></pre>
-
-<h5>随机变换界面：</h5>
-<p><img src="https://liwuwu.github.io/img/Random.gif" />      <img src="https://liwuwu.github.io/img/show.gif" /></p>
-<pre><code>回答问题栏界面切换方式慢放如右图，切换时间0.3s。
-</code></pre>
-
-<h4>3 部分功能说明：</h4>
-<h5>主页：</h5>
-<p><img src="https://liwuwu.github.io/img/ind.PNG" /></p>
-<p>用户场景：打开应用</p>
-<p>功能描述：算法推荐用户近期浏览相近内容</p>
-<p>优先级：高。</p>
-<p>输入/前置条件：打开知乎</p>
-<p>页面说明：<br />
-内容主要以视频、音频和文字这三种主要的多媒体形式展示，主要通过视觉和听觉对让用户浏览喜好内容。首页展示除了搜索外，还有视频、音频和文字三种媒体分类，用户可以自由切换媒体类型，通过喜欢和不感兴趣选项抒发自己对内容的喜好程度，将喜欢的内容收藏方便后期浏览。</p>
-<h5>会员：</h5>
-<p><img src="https://liwuwu.github.io/img/member.png" /></p>
-<p>用户场景：学习新内容</p>
-<p>功能描述：推荐书籍</p>
-<p>优先级：高。</p>
-<p>输入/前置条件：登录</p>
-<p>页面说明：<br />
-内容主要以音频和文字这两种主要的多媒体形式展示，主要通过视觉和听觉对让用户获取所需内容。包含搜索、收藏和历史记录功能，用户可以根据需要选择功能。用户根据需求选择所需内容，进行知识付费。</p>
-<h1>四、商业化：</h1>
+<h5>键盘说明：</h5>
+<p>在使用需要输入文字的功能时，点击输入框弹出的键盘属性：</p>
+<table border="0" cellspacing="0">
+   <tr>
+		<th></th>
+        <th>变更邮箱</th>
+        <th>更改密码</th>
+		<th>评论新添好友</th>
+		<th>更改昵称</th>
+   </tr>
+   <tr align=center>
+	<td></td><td></td><td></td><td>True</td><td>True</td>
+   </tr>
+   <tr align=center>
+	<td>英文</td><td>True</td><td>True</td><td></td><td></td>
+   </tr>
+</table>
+<h5>3.2 异常情况：</h5>
+<p>打断后重新打开 APP：</p>
+<table align=center border="0" cellspacing="0">
+   <tr>
+	<td>返回桌面/临时接电话</td><td>继续显示原来页面</td>
+   </tr>
+   <tr align=center>
+	<td>异常关闭/闪退/崩溃</td><td>启动页/首页</td>
+   </tr>
+   <tr>
+	<td>短信/其它通知</td><td>屏幕上方出现通知，不影响app</td>
+   </tr>
+</table>
+<p>网络或其它异常：</p>
+<table border="0" cellspacing="0">
+   <tr>
+	<td>点击页面空白区域</td><td>没有虚拟按钮或弹窗，点击空白区域无反应</td>
+   </tr>
+   <tr>
+	<td>无网络连接</td><td>打开app时无网络：网络连接不可用弹窗；使用app时无网络：不切换页面不提示，切换页面提示网络已断开</td>
+   </tr>
+   <tr>
+	<td>非wifi</td><td>浏览视频或动态图片提示正在使用移动网络，继续播放将会消耗流量；浏览其他内容不提示</td>
+   </tr>
+</table>
+<p>无网络情况</p>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/network.png"/>
+</div>
+<p>图片1：<br />
+描述：无网络常规页面提示<br />
+位置：页面中心<br />
+点击：重新加载进行刷新 </p>
+<p>图片2：<br />
+描述：无网络下播放视频<br />
+交互：不出现提示，视频中心区域有个加载图片一直转动，一定时间后出现感叹号，点击感叹号可以继续加载  </p>
+<h4>3.3 APP收费</h4>
+<h4>会员</h4>
+<p>花费：<br />
+月卡9元/月，年卡198元/年，季卡53元/季<br />
+特权：<br />
+1. 会员标识<br />
+2. 专属客服<br />
+3. 评论区发图<br />
+4. 关键词屏蔽<br />
+5. 动态置顶<br />
+6. 改名加速<br />
+7. 卡片挂饰<br />
+8. 会员表情  </p>
+<h1>四、功能详细说明</h1>
+<h3>4.1 欢迎页</h3>
+<div align=center>
+<img src="https://liwuwu.github.io/img/home.PNG"/>
+</div>
+<p><strong>页面名称：</strong>欢迎页<br />
+<strong>入口：</strong>进入app<br />
+<strong>逻辑说明：</strong>启动知乎后，自动进入欢迎页 </p>
+<h4>4.2 首页</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/index.PNG"/>
+</div>
+<p><strong>页面名称：</strong>首页<br />
+<strong>入口：</strong>打开app后或点击切换首页<br />
+<strong>逻辑说明：</strong><br />
+1：点击进入搜索页<br />
+2：点击切换关注/推荐/热榜<br />
+3：推送简介<br />
+4：点击切换首页/会员页/消息页/个人页  <br />
+<strong>页面交互说明：</strong> <br />
+2：点击切换栏目，切换到对应栏目，可以左右滑动，底部黑线对应当前位置  <br />
+4：底部按钮不支持左右滑动切换，点击时底部按钮图片变化。  <br />
+整体：长页面可以拖拽，一次加载固定数目推送，上拉刷新当前页面推送，下拉增加推送数目。  </p>
+<h4>4.3 搜索页</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/search.png"/>
+</div>
+<p><strong>页面名称：</strong>首页<br />
+<strong>入口：</strong>首页点击序号1<br />
+<strong>逻辑说明：</strong><br />
+1：点击输入要搜索内容
+2：点击切换搜索热点 
+3：点击返回上一页面 
+<strong>页面交互说明：</strong> <br />
+1：点击提示文字消失，底部键盘缓慢滑出，点击右边X清除输入文字，键盘滑入；<br />
+2：点击切换搜索热点，按钮背景色变化表示当前所在页面。</p>
+<h4>4.4 详情页</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/message.PNG"/>
+</div>
+<p>说明：
+1. 点击首页对应序列3进入<br />
+2. 点击相应连接返回  </p>
+<h4>4.5 会员页</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/menber.png"/>
+</div>
+<p><strong>页面名称：</strong>会员页<br />
+<strong>入口：</strong>点击底部导航栏切换<br />
+<strong>逻辑说明：</strong><br />
+1：点击进入学习清单页<br />
+2：点击切换会员推荐/读书会/私密课/Live讲座<br />
+3：广告<br />
+4：内容分类<br />
+5：今日头条<br />
+6：书籍简介<br />
+7：点击切换首页/会员页/消息页/个人页    <br />
+<strong>页面交互说明：</strong> <br />
+2：点击切换栏目，切换到对应栏目，可以左右滑动，栏目背景颜色变换表示当前所在栏目 <br />
+5：间隔2s，内容自动向上滚动<br />
+6：内容左右滑动变换 <br />
+7：底部按钮不支持左右滑动切换，点击时底部按钮图片变化。  <br />
+整体：长页面可以拖拽，一次加载固定数目推送，上拉刷新当前页面推送，下拉增加推送数目。  </p>
+<h4>4.6 学习清单页</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/learn.png"/>
+</div>
+<p>说明： <br />
+1：点击进入学习内容管理页<br />
+2：点击返回会员页 </p>
+<h4>4.7 管理页</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/menber.png"/>
+</div>
+<p><strong>页面名称：</strong>管理页<br />
+<strong>入口：</strong>点击学习清单页1<br />
+<strong>逻辑说明：</strong><br />
+1：点击返回学习清单页<br />
+2：点击返回会员页<br />
+3：过滤已学习过的内容   <br />
+<strong>页面交互说明：</strong> <br />
+3：点击，按钮向左或右移动，按钮在左时，不过滤已学习内容，在右时过滤已学习内容</p>
+<h4>4.8 消息页</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/notic.png"/>
+</div>
+<p><strong>页面名称：</strong>消息页<br />
+<strong>入口：</strong>下方导航栏切换<br />
+<strong>逻辑说明：</strong><br />
+1：点击切换通知/私信<br />
+<strong>页面交互说明：</strong> <br />
+1：点击切换栏目，切换到对应栏目，可以左右滑动，底部黑线对应当前位置  </p>
+<h4>4.9 个人页（已登录）</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/person.png"/>
+</div>
+<p><strong>页面名称：</strong>个人页<br />
+<strong>条件：</strong>已登录<br />
+<strong>入口：</strong>底部导航栏切换<br />
+<strong>逻辑说明：</strong><br />
+1：点击进入系统设置界面<br />
+2：点击进行搜索<br />
+3：进入创作/关注/收藏夹/最近浏览<br />
+4：点击切换会员付费界面 <br />
+5：点击进入功能页   </p>
+<h4>4.10 个人页（未登录）</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/person0.png"/>
+</div>
+<p><strong>页面名称：</strong>个人页  <br />
+<strong>入口：</strong>底部导航栏切换<br />
+<strong>逻辑说明：</strong><br />
+1：点击进入系统设置界面<br />
+2：点击进行搜索<br />
+3：选择登录方式  <br />
+<strong>页面交互说明：</strong>   <br />
+整体：长页面可以拖拽，下方我的卡片部分可以左右滑动。 </p>
+<h4>4.11 微博登录</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/weibo.png"/>
+</div>
+<p><strong>页面名称：</strong>微博登录页<br />
+<strong>条件：</strong>未登录<br />
+<strong>入口：</strong>个人页（未登录）序号3<br />
+<strong>逻辑说明：</strong><br />
+1：返回上一页<br />
+2：切换微博账号   <br />
+<strong>特殊说明：</strong>   <br />
+检测到微博未登录，打开微博程序登录界面。缺乏微博app该登录方式不可用</p>
+<h4>4.12 微信登录</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/weixin.png"/>
+</div>
+<p><strong>页面名称：</strong>微信登录页<br />
+<strong>条件：</strong>未登录<br />
+<strong>入口：</strong>个人页（未登录）序号3<br />
+<strong>逻辑说明：</strong><br />
+1：返回上一页<br />
+2：登录微信账号   <br />
+<strong>特殊说明：</strong>   <br />
+检测到微信未登录，打开微信程序登录界面。</p>
+<h4>4.13 账号密码登录</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/password.png"/>
+</div>
+<p><strong>页面名称：</strong>账号密码登录页<br />
+<strong>条件：</strong>未登录<br />
+<strong>入口：</strong>个人页（未登录）序号3<br />
+<strong>逻辑说明：</strong><br />
+1：返回上一页<br />
+2：手机验证登录 <br />
+3：输入账号密码
+4：点击登录<br />
+5：海外手机登陆<br />
+6：切换登录方式<br />
+<strong>特殊说明：</strong>   <br />
+3：账号格式：纯数字：是否符合11位；非纯数字：验证账号是否符合邮箱格式。错误提示：账号格式不对，提示用户‘请您检查是否正确输入账号’。  用户输入锁定大写时，提示‘键盘大写锁定’。</p>
+<h4>4.14 手机账号登录</h4>
+<div align=center>
+<img src="https://liwuwu.github.io/Know/img/phone.png"/>
+</div>
+<p><strong>页面名称：</strong>手机账号登录页<br />
+<strong>条件：</strong>未登录<br />
+<strong>入口：</strong>个人页（未登录）序号3<br />
+<strong>逻辑说明：</strong><br />
+1：返回上一页<br />
+2：手机验证登录 <br />
+3：输入手机号码
+4：点击登录<br />
+5：切换登录方式<br />
+<strong>特殊说明：</strong>   <br />
+3：登录输入手机号限制最大长度11，无法输入超过11个的数字。<br />
+输入数字少于11无法点击获取验证码，只有等于11时才能点击获取验证码。  点击获取验证码时进行验证，输入非数字，浮窗提示‘请输入数字’。</p>
+<h1>五 部分交互展示</h1>
+<h5>5.1 验证登录输入限制</h5>
+<div align=center>
+<img src="https://liwuwu.github.io/img/login.gif"/>
+</div> 
+<p>登录输入手机号限制最大长度11，无法输入超过11个的数字。<br />
+输入数字少于11无法点击获取验证码，只有等于11时才能点击获取验证码。<br />
+点击获取验证码时进行验证，输入非数字，浮窗提示‘请输入数字’。</p>
+<h5>5.2 下拉刷新：</h5>
+<div align=center>
+<img src="https://liwuwu.github.io/img/Refresh.gif"/>
+</div> 
+<p>往下拉拽，最多移动1/10当前界面距离。松开后，刷新页面，顶部提示下滑出现‘刷新成功’，悬停0.7s后，上滑消失。</p>
+<h5>5.3 搜索栏：</h5>
+<div align=center>
+<img src="https://liwuwu.github.io/img/Search.gif"/>
+</div> 
+<p>点击进入搜索界面，下方显示热搜内容，点击切换不同类型热搜内容，按钮颜色变化（浅灰），按钮框左右拖拽可以移动。<br />
+搜索栏有提示文字‘搜索知乎内容’，点击后消失，输入键盘从下往上滑动出现，动画时间0.5s。</p>
+<h5>5.4 首页：</h5>
+<div align=center>
+<img src="https://liwuwu.github.io/img/index.gif"/>
+</div> 
+<p>打开应用，首先进入首页，默认出现推荐栏。点击上方按钮切换不同栏目，长页面可以上下拖拽，拖拽时底部栏向下隐藏，切换结束显示。<br />
+左右拖拽，同样可以根据顶部位置切换栏目。</p>
+<h5>5.5 学习清单管理：</h5>
+<div align=center>
+<img src="https://liwuwu.github.io/img/learning.gif"/>
+</div>
+<p>点击管理进入学习清单管理界面，点击按钮缓慢向右移动，过滤内容。点击完成回到上一界面。</p>
+<h5>5.6 底部导航栏切换：</h5>
+<div align=center>
+<img src="https://liwuwu.github.io/img/bottom.gif"/>
+</div>
+<p>底部按钮不支持左右滑动切换，点击时底部按钮图片变化。</p>
+<h5>5.7 随机变换界面：</h5>
+<div align=center>
+<img src="https://liwuwu.github.io/img/Random.gif"/><img src="https://liwuwu.github.io/img/show.gif"/>
+</div>
+<p>回答问题栏界面切换方式慢放如右图，切换时间0.3s。</p>
+<h1>六、商业化：</h1>
 <p>内容与工具型产品的商业化，其中商业广告和知识付费为主要营收方式。 <br />
 商业广告可分为开屏广告和应用内广告，开屏广告的合作方主要为品牌商，在协定日期内展示海报。应用内广告投放依据用户标签定向推荐，更精准地面向用户群，呈现样式与内容接近，减少用户对广告的敏感感知，尽量不影响用户体验。<br />
 知识付费可分为内源知识付费和外源知识付费，其中内源知识付费为用户自主产生的内容、知识和问答等结合体，以及会员付费。外源知识付费主要为电子书籍购买链接。</p>
+<h1>七、测试异常页面及突发状况</h1>
+<h5>7.1 网络异常</h5>
+<p>在断网的情况下仍可以观看已加载内容，但是无法进行页面切换</p>
+<h5>7.2 多设备登录</h5>
+<p>不同的设备登录一个账号可以在不同客户端登录</p>
+<h5>7.3 ios 与Android 系统</h5>
+<p>ios 与Android 系统用户之间能够看到用户信息</p>
 
 </body>
 </html>
